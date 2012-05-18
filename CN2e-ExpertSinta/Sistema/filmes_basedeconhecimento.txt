@@ -1,0 +1,466 @@
+--------------------------------------------------------------------------------
+SOBRE O SISTEMA ESPECIALISTA
+  -- Nome:    Escolha de gênero de filmes
+  -- Autores: Unileste
+  -- Resumo:
+     Este sistema visa auxiliar o usuário a definir o gênero de filme que ele gosta. O sistema abrange os seguintes gêneros:
+
+      - Ação
+      - Terror
+      - Drama
+      - Romance
+      - Comédia
+      - Suspense
+      - Guerra
+      - Aventura
+      - Animação
+      - Cult
+
+Operador de maior precedência: conjunção
+Fator de confiança mínimo para aceitação de regra: 50
+
+SOBRE OS ARQUIVOS
+  Arquivo original: E:\faculdade\Curso CSI\6periodo\IA\trab 2\sinta32\filmes.BCM
+  O sistema não possui recursos de ajuda.
+--------------------------------------------------------------------------------
+
+VARIÁVEIS
+
+  a maioria das pessoas tem dificuldade de entender a mensagem do filme
+    Tipo:
+      univalorada
+  antagonista vilão
+    Tipo:
+      univalorada
+  atores fazem piadas o tempo todo
+    Tipo:
+      univalorada
+  classificado para maiores de 18 anos
+    Tipo:
+      univalorada
+  e assustador
+    Tipo:
+      univalorada
+  e engraçado
+    Tipo:
+      univalorada
+  envolve alguma tragedia
+    Tipo:
+      univalorada
+  envolve crime guerra ou policia
+    Tipo:
+      univalorada
+  envolve ficcao cientifica
+    Tipo:
+      univalorada
+  envolve tiroteios
+    Tipo:
+      univalorada
+  exibe muito sangue
+    Tipo:
+      univalorada
+  existe um par romantico
+    Tipo:
+      univalorada
+  feito por computacao grafica
+    Tipo:
+      univalorada
+  filme
+    Tipo:
+      univalorada
+  geralmente envolve coisas sobrenaturais ou tortura humana
+    Tipo:
+      univalorada
+  geralmente tem uma procura por um tesouro
+    Tipo:
+      univalorada
+  geralmente um dos protagonistas morrem
+    Tipo:
+      univalorada
+  gosta da sensacao de ansiedade
+    Tipo:
+      univalorada
+  gosta da sensacao de incerteza
+    Tipo:
+      univalorada
+  gosta da sensação de medo
+    Tipo:
+      univalorada
+  gosta de exploracao
+    Tipo:
+      univalorada
+  gosta de explosoes
+    Tipo:
+      univalorada
+  gosta de filmes onde todos ou quase todos morrem
+    Tipo:
+      univalorada
+  gosta de herois
+    Tipo:
+      univalorada
+  historia ficticia
+    Tipo:
+      univalorada
+  imagina o final de cada personagem
+    Tipo:
+      univalorada
+  os coadjuvantes geralmente morrem
+    Tipo:
+      univalorada
+  passam um mensagem inovadora
+    Tipo:
+      univalorada
+  personagens diferentes ou estranhos
+    Tipo:
+      univalorada
+  pode ter um final triste
+    Tipo:
+      univalorada
+  possui disputa amorosa
+    Tipo:
+      univalorada
+  possui envolvimento amoroso
+    Tipo:
+      univalorada
+  possui força fisica
+    Tipo:
+      univalorada
+  possui publico infantil
+    Tipo:
+      univalorada
+  protagonista e engraçado
+    Tipo:
+      univalorada
+  protagonista heroi
+    Tipo:
+      univalorada
+  protagonista(s) nao morre(m)
+    Tipo:
+      univalorada
+  resultado
+    Valores:
+      Você gosta de filmes cult.
+      Você gosta de filmes de animação.
+      Você gosta de filmes de suspense.
+      Você gosta de filmes de guerra.
+      Você gosta de filmes de comédia.
+      Você gosta de filmes de romance.
+      Você gosta de filmes de aventura.
+      Você gosta de filmes de terror.
+      Você gosta de filmes de drama.
+      Você gosta de filmes de ação.
+      Você não gosta de filmes.
+    Tipo:
+      univalorada
+  retrata conflitos historicos
+    Tipo:
+      univalorada
+  seu gosto por filmes e refinado
+    Tipo:
+      univalorada
+  tem alta tecnologia
+    Tipo:
+      univalorada
+  tem efeitos especiais
+    Tipo:
+      univalorada
+  tem faixa etaria livre
+    Tipo:
+      univalorada
+  tem humor
+    Tipo:
+      univalorada
+  tem piadas envolvendo sexo
+    Tipo:
+      univalorada
+  tem tensao
+    Tipo:
+      univalorada
+  tem tristeza
+    Tipo:
+      univalorada
+  tenta adivinhar o que vai acontecer
+    Tipo:
+      univalorada
+
+OBJETIVOS
+
+  resultado
+
+REGRAS
+
+  Regra 1
+    SE filme = Sim
+    E  protagonista heroi = Sim
+    E  antagonista vilão = Sim
+    E  envolve crime guerra ou policia = Sim
+    E  possui força fisica = Sim
+    E  tem tensao = Não
+    E  tem alta tecnologia = Sim
+    E  tem efeitos especiais = Sim
+    E  tem faixa etaria livre = Não
+    E  e assustador = Não
+    E  e engraçado = Não
+    E  envolve ficcao cientifica = Sim
+    ENTÃO resultado = Você gosta de filmes de ação. CNF 100%
+
+  Regra 2
+    SE filme = Sim
+    E  tem humor = Sim
+    E  tem tensao = Não
+    E  e engraçado = Sim
+    E  e assustador = Não
+    E  protagonista e engraçado = Sim
+    E  atores fazem piadas o tempo todo = Sim
+    E  tem piadas envolvendo sexo = Sim
+    E  tem tristeza = Não
+    E  gosta de filmes onde todos ou quase todos morrem = Não
+    E  feito por computacao grafica = Não
+    E  gosta da sensação de medo = Não
+    E  classificado para maiores de 18 anos = Não
+    ENTÃO resultado = Você gosta de filmes de comédia. CNF 100%
+
+  Regra 3
+    SE filme = Sim
+    E  tem humor = Não
+    E  protagonista heroi = Não
+    E  tem tensao = Sim
+    E  gosta da sensação de medo = Sim
+    E  gosta de filmes onde todos ou quase todos morrem = Sim
+    E  envolve ficcao cientifica = Sim
+    E  protagonista(s) nao morre(m) = Sim
+    E  exibe muito sangue = Sim
+    E  geralmente envolve coisas sobrenaturais ou tortura humana = Sim
+    E  os coadjuvantes geralmente morrem = Sim
+    E  classificado para maiores de 18 anos = Sim
+    ENTÃO resultado = Você gosta de filmes de terror. CNF 100%
+
+  Regra 4
+    SE filme = Sim
+    E  tem humor = Não
+    E  tem tensao = Sim
+    E  gosta da sensacao de incerteza = Sim
+    E  gosta da sensacao de ansiedade = Sim
+    E  gosta de exploracao = Não
+    E  gosta da sensação de medo = Não
+    E  possui força fisica = Não
+    E  e assustador = Sim
+    E  e engraçado = Não
+    E  envolve ficcao cientifica = Não
+    E  classificado para maiores de 18 anos = Sim
+    ENTÃO resultado = Você gosta de filmes de suspense. CNF 100%
+
+  Regra 5
+    SE filme = Sim
+    E  tem humor = Não
+    E  tem tensao = Não
+    E  tem tristeza = Sim
+    E  protagonista(s) nao morre(m) = Não
+    E  possui envolvimento amoroso = Sim
+    E  pode ter um final triste = Sim
+    E  possui disputa amorosa = Sim
+    E  existe um par romantico = Sim
+    E  os coadjuvantes geralmente morrem = Não
+    E  gosta de explosoes = Não
+    E  tem efeitos especiais = Não
+    E  envolve ficcao cientifica = Não
+    E  classificado para maiores de 18 anos = Não
+    ENTÃO resultado = Você gosta de filmes de romance. CNF 100%
+
+  Regra 6
+    SE filme = Sim
+    E  passam um mensagem inovadora = Sim
+    E  a maioria das pessoas tem dificuldade de entender a mensagem do filme = Sim
+    E  seu gosto por filmes e refinado = Sim
+    E  gosta de herois = Não
+    E  tenta adivinhar o que vai acontecer = Não
+    E  imagina o final de cada personagem = Não
+    E  e assustador = Não
+    E  possui disputa amorosa = Não
+    E  existe um par romantico = Não
+    E  envolve ficcao cientifica = Não
+    E  gosta da sensação de medo = Não
+    E  exibe muito sangue = Não
+    E  classificado para maiores de 18 anos = Não
+    ENTÃO resultado = Você gosta de filmes cult. CNF 100%
+
+  Regra 7
+    SE filme = Sim
+    E  gosta de herois = Sim
+    E  tem tensao = Não
+    E  e assustador = Não
+    E  gosta de exploracao = Sim
+    E  possui publico infantil = Não
+    E  exibe muito sangue = Não
+    E  geralmente tem uma procura por um tesouro = Sim
+    E  gosta da sensação de medo = Não
+    E  existe um par romantico = Sim
+    E  classificado para maiores de 18 anos = Não
+    ENTÃO resultado = Você gosta de filmes de aventura. CNF 100%
+
+  Regra 8
+    SE filme = Sim
+    E  tem humor = Sim
+    E  feito por computacao grafica = Sim
+    E  possui publico infantil = Sim
+    E  tem piadas envolvendo sexo = Não
+    E  envolve crime guerra ou policia = Não
+    E  gosta da sensação de medo = Não
+    E  pode ter um final triste = Não
+    E  historia ficticia = Sim
+    E  passam um mensagem inovadora = Não
+    E  personagens diferentes ou estranhos = Sim
+    E  envolve alguma tragedia = Não
+    E  e engraçado = Sim
+    E  e assustador = Não
+    E  tem faixa etaria livre = Sim
+    E  classificado para maiores de 18 anos = Não
+    ENTÃO resultado = Você gosta de filmes de animação. CNF 100%
+
+  Regra 9
+    SE filme = Sim
+    E  tem tensao = Sim
+    E  antagonista vilão = Não
+    E  gosta da sensacao de incerteza = Não
+    E  gosta da sensacao de ansiedade = Sim
+    E  gosta da sensação de medo = Não
+    E  tenta adivinhar o que vai acontecer = Sim
+    E  imagina o final de cada personagem = Sim
+    E  tem tristeza = Sim
+    E  tem alta tecnologia = Não
+    E  envolve alguma tragedia = Sim
+    E  atores fazem piadas o tempo todo = Não
+    E  historia ficticia = Não
+    E  personagens diferentes ou estranhos = Não
+    E  retrata conflitos historicos = Não
+    E  envolve tiroteios = Não
+    E  tem humor = Não
+    E  classificado para maiores de 18 anos = Não
+    ENTÃO resultado = Você gosta de filmes de drama. CNF 100%
+
+  Regra 10
+    SE filme = Sim
+    E  retrata conflitos historicos = Sim
+    E  tem humor = Não
+    E  tem tensao = Não
+    E  envolve tiroteios = Sim
+    E  gosta de explosoes = Sim
+    E  possui envolvimento amoroso = Não
+    E  a maioria das pessoas tem dificuldade de entender a mensagem do filme = Não
+    E  seu gosto por filmes e refinado = Não
+    E  geralmente tem uma procura por um tesouro = Não
+    E  gosta da sensação de medo = Não
+    E  e engraçado = Não
+    E  exibe muito sangue = Sim
+    E  classificado para maiores de 18 anos = Não
+    ENTÃO resultado = Você gosta de filmes de guerra. CNF 100%
+
+  Regra 11
+    SE filme = Não
+    ENTÃO resultado = Você não gosta de filmes. CNF 100%
+
+PERGUNTAS
+
+  Variável:a maioria das pessoas tem dificuldade de entender a mensagem do filme
+     Pergunta:"A maioria das pessoas tem dificuldade de entender a mensagem dos filmes que você assiste?"
+  Variável:antagonista vilão
+     Pergunta:"O antagonista do filme é vilão?"
+     Motivo:"O antagonista faz o papel contrário ao protagonista. Geralmente eles não se gostam
+  Variável:atores fazem piadas o tempo todo
+     Pergunta:"A todo momento os atores fazem piadas?"
+  Variável:classificado para maiores de 18 anos
+     Pergunta:"Geralmente estes filmes são classificados para maiores de 18 anos?"
+  Variável:e assustador
+     Pergunta:"Gosta de filmes assustadores?"
+  Variável:e engraçado
+     Pergunta:"Gosta de filmes engraçados?"
+  Variável:envolve alguma tragedia
+     Pergunta:"Esse gênero costuma tratar de tragédias?"
+  Variável:envolve crime guerra ou policia
+     Pergunta:"O seu tipo de filme envolve crimes, guerras ou polícia?"
+  Variável:envolve ficcao cientifica
+     Pergunta:"Geralmente o filme possui ficção científica?"
+  Variável:envolve tiroteios
+     Pergunta:"Envolve tiroteios?"
+  Variável:exibe muito sangue
+     Pergunta:"Esse gênero costuma ter filmes sangrentos?"
+  Variável:existe um par romantico
+     Pergunta:"Geralmente há um par romântico no filme?"
+  Variável:feito por computacao grafica
+     Pergunta:"Os filmes desse gênero são totalmente feitos em computação gráfica?"
+  Variável:filme
+     Pergunta:"Você assiste filmes?"
+  Variável:geralmente envolve coisas sobrenaturais ou tortura humana
+     Pergunta:"Geralmente envolve coisas sobrenaturais ou tortura humana?"
+  Variável:geralmente tem uma procura por um tesouro
+     Pergunta:"Envolve caça ao tesouro?"
+  Variável:geralmente um dos protagonistas morrem
+     Pergunta:"Na maioria das vezes um dos protagonistas morrem?"
+  Variável:gosta da sensacao de ansiedade
+     Pergunta:"Você gosta da sensação de ansiedade que o filme passa?"
+  Variável:gosta da sensacao de incerteza
+     Pergunta:"Você gosta da sensação de incerteza que o filme passa?"
+  Variável:gosta da sensação de medo
+     Pergunta:"Você gosta da sensação de medo que o filme passa?"
+  Variável:gosta de exploracao
+     Pergunta:"Você gosta de explorações?"
+  Variável:gosta de explosoes
+     Pergunta:"Gosta de explosôes?"
+  Variável:gosta de filmes onde todos ou quase todos morrem
+     Pergunta:"Geralmente todos ou quase todos os atores desses filmes morrem?"
+  Variável:gosta de herois
+     Pergunta:"Gosta filmes de heróis?"
+  Variável:historia ficticia
+     Pergunta:"Esses filmes retratam histórias fictícias?"
+  Variável:imagina o final de cada personagem
+     Pergunta:"Você fica imaginando o final de cada personagem do filme?"
+  Variável:os coadjuvantes geralmente morrem
+     Pergunta:"Os coadjuvantes geralmente morrem?"
+  Variável:passam um mensagem inovadora
+     Pergunta:"Os filmes desse gênero passam uma mensagem inovadora?"
+  Variável:personagens diferentes ou estranhos
+     Pergunta:"Os personagens são diferentes do normal, estranhos?"
+  Variável:pode ter um final triste
+     Pergunta:"Geralmente o final desses filmes são tristes?"
+  Variável:possui disputa amorosa
+     Pergunta:"Posui uma disputa amorosa no filme?"
+  Variável:possui envolvimento amoroso
+     Pergunta:"Possui envolvimento amoroso?"
+  Variável:possui força fisica
+     Pergunta:"Os filmes que você assiste possuem disputas de força física?"
+     Motivo:"Disputas de força física seriam lutas, por exemplo
+  Variável:possui publico infantil
+     Pergunta:"Geralmente possui publico infantil?"
+  Variável:protagonista e engraçado
+     Pergunta:"O protagonista é engraçado?"
+  Variável:protagonista heroi
+     Pergunta:"O protagonista dos filmes geralmente é o heroi da história?"
+  Variável:protagonista(s) nao morre(m)
+     Pergunta:"O protagonista não morre nesse tipo de filme?"
+  Variável:retrata conflitos historicos
+     Pergunta:"O gênero retrata conflitos históricos?"
+  Variável:seu gosto por filmes e refinado
+     Pergunta:"Seu gosto por filmes é refinado?"
+  Variável:tem alta tecnologia
+     Pergunta:"Os filmes que você gosta possuem alta tecnologia?"
+  Variável:tem efeitos especiais
+     Pergunta:"É utilizado efeitos especiais nestes filmes?"
+  Variável:tem faixa etaria livre
+     Pergunta:"A faixa etária deste gênero é livre?"
+  Variável:tem humor
+     Pergunta:"Os filmes tem humor?"
+  Variável:tem piadas envolvendo sexo
+     Pergunta:"Os atores utilizam muitas piadas envolvendo sexo?"
+  Variável:tem tensao
+     Pergunta:"Você sente tensão ao ver esses filmes?"
+  Variável:tem tristeza
+     Pergunta:"Há muita tristeza nos filmes deste gênero?"
+  Variável:tenta adivinhar o que vai acontecer
+     Pergunta:"Você tenta adivinhar o que vai acontecer a todo momento?"
+
+--------------------------------------------------------------------------------
+Gerado com o Expert SINTA versão 1.1b
+(c) 1997 - Universidade Federal do Ceará
+           Laboratório de Inteligência Artificial
+           LIA/UFC
+--------------------------------------------------------------------------------
