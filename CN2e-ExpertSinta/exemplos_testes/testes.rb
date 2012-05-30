@@ -83,17 +83,20 @@
 #puts variavel
 #puts variavelmod
 
-linha = "then resultado == voce nao gosta de filmes end"
+#linha = "then resultado == voce nao gosta de filmes end"
 
-if linha =~ /then/
-  /=\s/.match(linha)
-  init_valor = $'
+#if linha =~ /then/
+#  /=\s/.match(linha)
+#  init_valor = $'
 
-  if init_valor =~ /\send/
-    valor = $`
-    valormod = valor.gsub("#{valor}", "\"#{valor}\"")
-  end
-end
+#  if init_valor =~ /\send/
+#    valor = $`
+#    valormod = valor.gsub("#{valor}", "\"#{valor}\"")
+#  end
+#end
 
-puts valor
-puts valormod
+#puts valor
+#puts valormod
+
+var = "then resultado == \"voce gosta de filmes de acao\" end"
+puts /then/.match(var)

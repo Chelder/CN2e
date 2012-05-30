@@ -88,7 +88,10 @@ while not rules.eof do
 
   if contr > contr2
 	  linha = tr.remover_acentos(linha)
-    linha = linha.gsub(regexs['='], "==")
+
+    if !(linha =~ /then/)
+      linha = linha.gsub(regexs['='], "==")
+    end
 
     if linha =~ regexs['SE']
       linha = linha.gsub(regexs['SE'], "if")
@@ -118,6 +121,12 @@ selinhas.each do |linha|
   end
 
   if linha =~ /if\s+/ or linha =~ /and\s+/ or linha =~ /then\s+/
+    linha = linha.gsub(/\s+if/, "if")
+    linha = linha.gsub(/\s+and/, "and")
+    linha = linha.gsub(/\s+then/, "then")
+  end
+
+  if linha =~ /if\s+/ or linha =~ /and\s+/ or linha =~ /then\s+/
     init_variavel = $'
 
     if init_variavel =~ /\s*=/
@@ -144,14 +153,14 @@ selinhas.each do |linha|
 end
 
 #Pega as veriaveis, guarda cada uma delas em uma posição do vetor sefinal e cria a instancia das variaveis
-setraduzido.each do |linha|
-  if !(linha == "")
-    variavel = /\w+\s+\=/.match(linha).to_s
-    variavel << ' ""'
-    sefinal[cont2] = variavel
-    cont2 += 1
-  end
-end
+#setraduzido.each do |linha|
+#  if !(linha == "")
+#    variavel = /\w+\s+\=/.match(linha).to_s
+#    variavel << ' ""'
+#    sefinal[cont2] = variavel
+#    cont2 += 1
+#  end
+#end
 
 #Tira os valores repetidos
 sefinal.uniq!
@@ -159,25 +168,24 @@ sefinal.uniq!
 cont2 = sefinal.length
 
 #Concatena as linhas que contem and para tornar o SE compilável
-while not cont == setraduzido.length do
-  if !(setraduzido[cont] =~ regexs["then"])
-    texto << setraduzido[cont]
-  else
-    textothen = setraduzido[cont]
-    sefinal[cont2] = texto
-    cont2 += 1
-    sefinal[cont2] = textothen
-    cont2 += 1
+#while not cont == setraduzido.length do
+#  if !(setraduzido[cont] =~ regexs["then"])
+#    texto << " " << setraduzido[cont]
+#  else
+#    textothen = setraduzido[cont]
+#    sefinal[cont2] = texto
+#    cont2 += 1
+#    sefinal[cont2] = textothen
+#    cont2 += 1
+#
+#    texto = ""
+#  end
 
-    texto = ""
-  end
-
-  cont += 1
-end
-
+#  cont += 1
+#end
 
 #puts contr2
-#puts selinhas
+puts selinhas
 #puts selinhas[14].encoding.name
 #selinhas[14].force_encoding("iso-8859-1")
 #puts selinhas[14].encoding.name
@@ -189,9 +197,9 @@ puts sefinal
 rules.close
 
 #Cria o arquivo
-file = File.new("filmes.rb", "w")
+#file = File.new("filmes.rb", "w")
 
 #Grava o Sistema Especialista em ruby no arquivo
-sefinal.each do |linhat|
-  file.puts "#{linhat}"
-end
+#sefinal.each do |linhat|
+#  file.puts "#{linhat}"
+#end

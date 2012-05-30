@@ -31,16 +31,25 @@
       <file leaf-file-name="testes.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/exemplos_testes/testes.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="87" column="18" selection-start="1523" selection-end="1523" vertical-scroll-proportion="0.0">
+            <state line="101" column="21" selection-start="1792" selection-end="1792" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CN2e_ExpertSinta.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="CN2e_ExpertSinta.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Sistema/CN2e_ExpertSinta.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="195" column="0" selection-start="4719" selection-end="4719" vertical-scroll-proportion="2.1236558">
+            <state line="91" column="23" selection-start="2415" selection-end="2415" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="filmes_basedeconhecimento.txt" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Sistema/filmes_basedeconhecimento.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="408" column="19" selection-start="12050" selection-end="12050" vertical-scroll-proportion="0.059139784">
               <folding />
             </state>
           </provider>
@@ -49,7 +58,16 @@
       <file leaf-file-name="filmes.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Sistema/filmes.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="40" selection-start="3524" selection-end="3524" vertical-scroll-proportion="0.0">
+            <state line="52" column="16" selection-start="2886" selection-end="2886" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ambulancia.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Sistema/ambulancia.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -58,7 +76,7 @@
       <file leaf-file-name="CN2e_v2.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Sistema/CN2e_v2.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="247" column="6" selection-start="7026" selection-end="7026" vertical-scroll-proportion="0.0">
+            <state line="155" column="14" selection-start="4792" selection-end="4792" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -86,7 +104,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/filmes_basedeconhecimento.txt" />
         <option value="$PROJECT_DIR$/extend_string.rb" />
         <option value="C:/Ruby192/lib/ruby/gems/1.9.1/gems/brstring-3.1.0/lib/brstring/string_portuguese.rb" />
         <option value="$PROJECT_DIR$/testes.rb" />
@@ -95,13 +112,14 @@
         <option value="$PROJECT_DIR$/testes_classes/sentidos.rb" />
         <option value="$PROJECT_DIR$/testes_classes/main.rb" />
         <option value="$PROJECT_DIR$/CN2e_ExpertSinta.rb" />
-        <option value="$PROJECT_DIR$/Sistema/filmes_basedeconhecimento.txt" />
         <option value="$PROJECT_DIR$/Sistema/CN2e.rb" />
         <option value="$PROJECT_DIR$/Sistema/traducao_se.rb" />
         <option value="$PROJECT_DIR$/exemplos_testes/teste.rb" />
+        <option value="$PROJECT_DIR$/Sistema/CN2e_v2.rb" />
+        <option value="$PROJECT_DIR$/Sistema/filmes.rb" />
         <option value="$PROJECT_DIR$/exemplos_testes/testes.rb" />
         <option value="$PROJECT_DIR$/Sistema/CN2e_ExpertSinta.rb" />
-        <option value="$PROJECT_DIR$/Sistema/CN2e_v2.rb" />
+        <option value="$PROJECT_DIR$/Sistema/filmes_basedeconhecimento.txt" />
       </list>
     </option>
   </component>
@@ -215,7 +233,7 @@
       <recent name="C:\Ruby192\lib\" />
     </key>
   </component>
-  <component name="RunManager" selected="Ruby.filmes">
+  <component name="RunManager" selected="Ruby.CN2e_ExpertSinta">
     <configuration default="false" name="All tests in: CN2e-ExpertSinta" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda" temporary="true">
       <predefined_log_file id="RUBY_TESTUNIT" enabled="true" />
       <module name="CN2e-ExpertSinta" />
@@ -452,6 +470,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2813008" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284553" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19419643" sideWeight="0.21626016" order="1" side_tool="true" content_ui="tabs" />
@@ -464,7 +483,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284553" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284553" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="eSnippet Pro" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3284553" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -497,7 +515,7 @@
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="alteração das variáveis antecedidas por AND (melhoria do código" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sistema está gerando o arquivo filmes.rb. Falta remover espaços antes do IF, AND e THEN" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -516,6 +534,7 @@
     <MESSAGE value="inclusão de teste.rb" />
     <MESSAGE value="alteração das variáveis antecedidas por AND" />
     <MESSAGE value="alteração das variáveis antecedidas por AND (melhoria do código" />
+    <MESSAGE value="Sistema está gerando o arquivo filmes.rb. Falta remover espaços antes do IF, AND e THEN" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -561,35 +580,44 @@
         <state line="6" column="53" selection-start="138" selection-end="138" vertical-scroll-proportion="0.22956522" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Sistema/filmes_basedeconhecimento.txt">
+    <entry file="file://$PROJECT_DIR$/Sistema/ambulancia.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="466" column="0" selection-start="14800" selection-end="14800" vertical-scroll-proportion="0.7704348" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/exemplos_testes/testes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="18" selection-start="1523" selection-end="1523" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Sistema/CN2e_v2.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="247" column="6" selection-start="7026" selection-end="7026" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Sistema/filmes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="40" selection-start="3524" selection-end="3524" vertical-scroll-proportion="0.0">
+        <state line="52" column="16" selection-start="2886" selection-end="2886" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exemplos_testes/testes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="101" column="21" selection-start="1792" selection-end="1792" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sistema/CN2e_v2.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="155" column="14" selection-start="4792" selection-end="4792" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Sistema/CN2e_ExpertSinta.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="195" column="0" selection-start="4719" selection-end="4719" vertical-scroll-proportion="2.1236558">
+        <state line="91" column="23" selection-start="2415" selection-end="2415" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sistema/filmes_basedeconhecimento.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="408" column="19" selection-start="12050" selection-end="12050" vertical-scroll-proportion="0.059139784">
           <folding />
         </state>
       </provider>

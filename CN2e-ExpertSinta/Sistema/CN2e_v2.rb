@@ -212,7 +212,7 @@ cont2 = sefinal.length
 #Concatena as linhas que contem and para tornar o SE compilável
 while not cont == setraduzido.length do
   if !(setraduzido[cont] =~ regexs["then"])
-    texto << setraduzido[cont]
+    texto << " " << setraduzido[cont]
   else
     textothen = setraduzido[cont]
     sefinal[cont2] = texto
