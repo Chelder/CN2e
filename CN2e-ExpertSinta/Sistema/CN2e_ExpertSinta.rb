@@ -18,7 +18,7 @@ selinhas = Array.new
 #Array com o Sistema Especialista traduzido, faltando a concatenação
 setraduzido = Array.new
 #Array com as variaveis para inicialização
-vetorvar = Array.new
+valores = Array.new
 #Array com a versão final do Sistema Especialista traduzido
 sefinal = Array.new
 
@@ -40,11 +40,12 @@ regexs = Hash[ 'SE' => /SE/,
               ]
 
 #Inicialização de variáveis
-#Contadores utilizados na tradução do SE
+#Contadores
 contr = 0
 contr2 = 10000000000
 contr3 = 0
 contr4 = 0
+contvar = 0
 
 #Contadores utilizados na tradução do dos valores
 #contv = 0
@@ -112,7 +113,13 @@ while not rules.eof do
 end
 
 selinhas.each do |linha|
-  if linha =~ /and\s*/
+  if !(linha =~ regexs['then']) and (linha =~ /and / or linha =~ /if /)
+    /\w*$/.match(linha)
+    var = $&
+    linha = linha.gsub("#{var}", "\"#{var}\"")
+  end
+
+  if linha =~ /if\s+/ or linha =~ /and\s+/ or linha =~ /then\s+/
     init_variavel = $'
 
     if init_variavel =~ /\s*=/
@@ -133,6 +140,7 @@ end
 #selinhas[14].force_encoding("iso-8859-1")
 #puts selinhas[14].encoding.name
 puts setraduzido
+p valores
 
 #-------------------------------------------------------- tradução -------------------------------------------------#
 

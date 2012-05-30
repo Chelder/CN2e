@@ -30,18 +30,27 @@
 
 #puts /(\w*\s?)*/.match(string)
 
-string = "and  envolve crime guerra ou policia == sim"
+#string = "and  envolve crime guerra ou policia == nao"
 
-if string =~ /and\s*/
-  init_variavel = $'
+#/\w*$/.match(string)
+#p var = $&
+#puts string = string.gsub("#{var}", "\"#{var}\"")
 
-  if init_variavel =~ /\s*=/
-    variavel = $`
-    variavelmod = variavel.gsub(/\s/, "_")
-  end
-end
+#p $`
+#p $&
+#p $'
 
-puts string = string.gsub(/#{variavel}/, "#{variavelmod}")
+
+#if string =~ /and\s*/
+#  init_variavel = $'
+#
+#  if init_variavel =~ /\s*=/
+#    variavel = $`
+#    variavelmod = variavel.gsub(/\s/, "_")
+#  end
+#end
+
+#puts string = string.gsub(/#{variavel}/, "#{variavelmod}")
 
 
 
@@ -60,3 +69,16 @@ puts string = string.gsub(/#{variavel}/, "#{variavelmod}")
 #p $&
 #p $'
 
+linha = "and  a maioria das pessoas tem dificuldade de entender a mensagem do filme == \"nao\""
+
+if linha =~ /if\s+/ or linha =~ /and\s+/ or linha =~ /then\s+/
+    init_variavel = $'
+
+    if init_variavel =~ /\s*=/
+      variavel = $`
+      variavelmod = variavel.gsub(/\s/, "_")
+    end
+end
+
+puts variavel
+puts variavelmod

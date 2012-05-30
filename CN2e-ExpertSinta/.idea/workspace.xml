@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="37df93a7-56fa-4589-87ce-fd087531b5fa" name="Default" comment="inclusão de teste.rb">
+    <list default="true" id="37df93a7-56fa-4589-87ce-fd087531b5fa" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Sistema/CN2e_ExpertSinta.rb" afterPath="$PROJECT_DIR$/Sistema/CN2e_ExpertSinta.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exemplos_testes/testes.rb" afterPath="$PROJECT_DIR$/exemplos_testes/testes.rb" />
@@ -30,7 +30,7 @@
       <file leaf-file-name="testes.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/exemplos_testes/testes.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="14" selection-start="823" selection-end="868" vertical-scroll-proportion="0.0">
+            <state line="73" column="61" selection-start="1269" selection-end="1269" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -39,7 +39,7 @@
       <file leaf-file-name="CN2e_ExpertSinta.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Sistema/CN2e_ExpertSinta.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="114" column="2" selection-start="2978" selection-end="3132" vertical-scroll-proportion="0.11290322">
+            <state line="121" column="63" selection-start="3184" selection-end="3184" vertical-scroll-proportion="0.11827957">
               <folding />
             </state>
           </provider>
@@ -48,7 +48,7 @@
       <file leaf-file-name="CN2e_v2.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Sistema/CN2e_v2.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="251" column="0" selection-start="7059" selection-end="7059" vertical-scroll-proportion="0.0">
+            <state line="21" column="0" selection-start="848" selection-end="848" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -86,9 +86,9 @@
         <option value="$PROJECT_DIR$/CN2e_ExpertSinta.rb" />
         <option value="$PROJECT_DIR$/Sistema/filmes_basedeconhecimento.txt" />
         <option value="$PROJECT_DIR$/Sistema/CN2e.rb" />
-        <option value="$PROJECT_DIR$/Sistema/CN2e_v2.rb" />
         <option value="$PROJECT_DIR$/Sistema/traducao_se.rb" />
         <option value="$PROJECT_DIR$/exemplos_testes/teste.rb" />
+        <option value="$PROJECT_DIR$/Sistema/CN2e_v2.rb" />
         <option value="$PROJECT_DIR$/exemplos_testes/testes.rb" />
         <option value="$PROJECT_DIR$/Sistema/CN2e_ExpertSinta.rb" />
       </list>
@@ -139,7 +139,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Favorites" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -188,16 +187,17 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Favorites" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="http.proxy" />
     <property name="recentsLimit" value="5" />
-    <property name="options.searchVisible" value="true" />
+    <property name="options.lastSelected" value="http.proxy" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -205,22 +205,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Ruby.CN2e_ExpertSinta">
-    <configuration default="false" name="main" type="RubyRunConfigurationType" factoryName="Ruby" temporary="true">
-      <module name="CN2e-ExpertSinta" />
-      <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RUBY_RUN_CONFIG NAME="WORK DIR" VALUE="$PROJECT_DIR$/testes_classes" />
-      <RUBY_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RUBY_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RUBY_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
-      <envs />
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" track_test_folders="true" runner="rcov" />
-      <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$PROJECT_DIR$/testes_classes/main.rb" />
-      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
-      <RunnerSettings RunnerId="RubyRunner" />
-      <ConfigurationWrapper RunnerId="RubyRunner" />
-      <method />
-    </configuration>
     <configuration default="false" name="traducao_se" type="RubyRunConfigurationType" factoryName="Ruby" temporary="true">
       <module name="CN2e-ExpertSinta" />
       <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -289,6 +273,22 @@
       <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
       <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" track_test_folders="true" runner="rcov" />
       <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$PROJECT_DIR$/exemplos_testes/testes.rb" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
+      <RunnerSettings RunnerId="RubyRunner" />
+      <ConfigurationWrapper RunnerId="RubyRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="CN2e_v2" type="RubyRunConfigurationType" factoryName="Ruby" temporary="true">
+      <module name="CN2e-ExpertSinta" />
+      <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RUBY_RUN_CONFIG NAME="WORK DIR" VALUE="$PROJECT_DIR$/Sistema" />
+      <RUBY_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RUBY_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" track_test_folders="true" runner="rcov" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$PROJECT_DIR$/Sistema/CN2e_v2.rb" />
       <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
       <RunnerSettings RunnerId="RubyRunner" />
       <ConfigurationWrapper RunnerId="RubyRunner" />
@@ -383,11 +383,11 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Ruby.main" />
-      <item index="1" class="java.lang.String" itemvalue="Ruby.traducao_se" />
-      <item index="2" class="java.lang.String" itemvalue="Test::Unit/Shoulda.All tests in: CN2e-ExpertSinta" />
-      <item index="3" class="java.lang.String" itemvalue="Ruby.CN2e_ExpertSinta" />
-      <item index="4" class="java.lang.String" itemvalue="Ruby.testes" />
+      <item index="0" class="java.lang.String" itemvalue="Ruby.traducao_se" />
+      <item index="1" class="java.lang.String" itemvalue="Test::Unit/Shoulda.All tests in: CN2e-ExpertSinta" />
+      <item index="2" class="java.lang.String" itemvalue="Ruby.CN2e_ExpertSinta" />
+      <item index="3" class="java.lang.String" itemvalue="Ruby.testes" />
+      <item index="4" class="java.lang.String" itemvalue="Ruby.CN2e_v2" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -439,22 +439,22 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284553" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32357723" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2813008" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284553" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19419643" sideWeight="0.21626016" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17559524" sideWeight="0.6699187" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3300813" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="725" y="513" width="470" height="373" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3300813" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="725" y="513" width="470" height="373" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284553" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284553" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="SVN Repositories" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284553" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -485,7 +485,7 @@
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="inclusão de teste.rb" />
+    <option name="LAST_COMMIT_MESSAGE" value="alteração das variáveis antecedidas por AND" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -502,6 +502,7 @@
     <MESSAGE value="Teste de commit com o sistema.rar" />
     <MESSAGE value="commit directory" />
     <MESSAGE value="inclusão de teste.rb" />
+    <MESSAGE value="alteração das variáveis antecedidas por AND" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -534,49 +535,41 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/exemplos_testes/teste.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="3" selection-start="81" selection-end="81" vertical-scroll-proportion="0.114285715">
-          <folding />
-        </state>
+        <state line="2" column="3" selection-start="81" selection-end="81" vertical-scroll-proportion="0.114285715" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Sistema/CN2e.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="216" column="0" selection-start="5158" selection-end="5158" vertical-scroll-proportion="0.80545455">
-          <folding />
-        </state>
+        <state line="216" column="0" selection-start="5158" selection-end="5158" vertical-scroll-proportion="0.80545455" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Sistema/traducao_se.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="53" selection-start="138" selection-end="138" vertical-scroll-proportion="0.22956522">
-          <folding />
-        </state>
+        <state line="6" column="53" selection-start="138" selection-end="138" vertical-scroll-proportion="0.22956522" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Sistema/filmes_basedeconhecimento.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="466" column="0" selection-start="14800" selection-end="14800" vertical-scroll-proportion="0.7704348">
-          <folding />
-        </state>
+        <state line="466" column="0" selection-start="14800" selection-end="14800" vertical-scroll-proportion="0.7704348" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Sistema/CN2e_v2.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="251" column="0" selection-start="7059" selection-end="7059" vertical-scroll-proportion="0.0">
+        <state line="21" column="0" selection-start="848" selection-end="848" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/exemplos_testes/testes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="14" selection-start="823" selection-end="868" vertical-scroll-proportion="0.0">
+        <state line="73" column="61" selection-start="1269" selection-end="1269" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Sistema/CN2e_ExpertSinta.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="114" column="2" selection-start="2978" selection-end="3132" vertical-scroll-proportion="0.11290322">
+        <state line="121" column="63" selection-start="3184" selection-end="3184" vertical-scroll-proportion="0.11827957">
           <folding />
         </state>
       </provider>
