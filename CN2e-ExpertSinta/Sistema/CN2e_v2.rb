@@ -55,7 +55,6 @@ contvetor = 0
 #Contadores utilizados na contatenação das condições do IF
 cont = 0;
 cont2 = 0;
-cont3 = 0;
 
 #Variaveis utiliadas para alocação de valores temporários
 texto = ""
@@ -198,7 +197,7 @@ end
 #Pega as veriaveis, guarda cada uma delas em uma posição do vetor sefinal e cria a instancia das variaveis
 setraduzido.each do |linha|
   if !(linha == "")
-    variavel = /\w+\s\=/.match(linha).to_s
+    variavel = /\w+\s+\=/.match(linha).to_s
     variavel << ' ""'
     sefinal[cont2] = variavel
     cont2 += 1
@@ -242,10 +241,11 @@ rules.close
 values.close
 
 #Cria o arquivo ambulancia.rb
-exit = File.new("ambulancia.rb", "w")
+file = File.new("ambulancia.rb", "w")
 
 #Grava o Sistema Especialista em ruby no arquivo
 sefinal.each do |linhat|
-  exit.puts "#{linhat}"
+  file.puts "#{linhat}"
 end
+
 

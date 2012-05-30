@@ -45,7 +45,6 @@ contr = 0
 contr2 = 10000000000
 contr3 = 0
 contr4 = 0
-contvar = 0
 
 #Contadores utilizados na tradução do dos valores
 #contv = 0
@@ -57,12 +56,11 @@ contvar = 0
 #contvetor = 0
 
 #Contadores utilizados na contatenação das condições do IF
-#cont = 0;
-#cont2 = 0;
-#cont3 = 0;
+cont = 0;
+cont2 = 0;
 
 #Variaveis utiliadas para alocação de valores temporários
-#texto = ""
+texto = ""
 #textothen = ""
 
 
@@ -128,135 +126,72 @@ selinhas.each do |linha|
     end
   end
 
+  if linha =~ regexs['then']
+    /=\s/.match(linha)
+    init_valor = $'
+
+    if init_valor =~ /\send/
+      valor = $`
+      valormod = valor.gsub("#{valor}", "\"#{valor}\"")
+    end
+  end
+
   linha = linha.gsub(/#{variavel}/, "#{variavelmod}")
+  linha = linha.gsub(/#{valor}/, "#{valormod}")
 
   setraduzido[contr4] = linha
   contr4 += 1
 end
+
+#Pega as veriaveis, guarda cada uma delas em uma posição do vetor sefinal e cria a instancia das variaveis
+setraduzido.each do |linha|
+  if !(linha == "")
+    variavel = /\w+\s+\=/.match(linha).to_s
+    variavel << ' ""'
+    sefinal[cont2] = variavel
+    cont2 += 1
+  end
+end
+
+#Tira os valores repetidos
+sefinal.uniq!
+#Continua a contagem a partir do ultimo valor inserido
+cont2 = sefinal.length
+
+#Concatena as linhas que contem and para tornar o SE compilável
+while not cont == setraduzido.length do
+  if !(setraduzido[cont] =~ regexs["then"])
+    texto << setraduzido[cont]
+  else
+    textothen = setraduzido[cont]
+    sefinal[cont2] = texto
+    cont2 += 1
+    sefinal[cont2] = textothen
+    cont2 += 1
+
+    texto = ""
+  end
+
+  cont += 1
+end
+
 
 #puts contr2
 #puts selinhas
 #puts selinhas[14].encoding.name
 #selinhas[14].force_encoding("iso-8859-1")
 #puts selinhas[14].encoding.name
-puts setraduzido
-p valores
-
-#-------------------------------------------------------- tradução -------------------------------------------------#
-
-#caminha em todas as posições do vetor traduzindo as strings do arquivo de regras
-#while not rules.eof do
-
-  #traducao = TraducaoSe.new
-
-  #Pega uma linha do arquivo filmes_basedeconhecimento e guarda na posição contr do vetor selinhas
-  #selinhas[contr] = rules.gets.chomp.to_s
-
-  #Guarda o valor do vetor selinhas na posição contr para a variável linha
-  #linha = selinhas[contr].to_s
-  #Deixa todas as letras minúsculas
-  #linha = linha.downcase
-  #Remove acentos
-  #Gem para remoção de acentos
-
-  #linha = traducao.remover_acentos(linha)
-
-  #selinhas[contr] = linha
-
-  #Se não houver a palavra then na linha
-#  if !(linha =~ regexs['then'])
-#    #Troca o sinal de igual (=) por um sinal dúplo (==)
-#    linha = linha.gsub(regexs['='], "==")
-#  end
-
-#  if linha =~ regexs['='] and !(linha =~ regexs['then'])
-#    matrizvalores.each do |valor|
-#        #O valor 'nao' está sendo encontrado e cortando o resto do tokem
-#        if linha =~ /#{valor}/
-#          tokem = $'
-#          if tokem == "" or tokem =~ /(\s|\s\s)/
-#            linha = linha.gsub(/#{valor}/, "\"#{valor}\"")
-#          end
-#        end
-#    end
-#  end
-
-#  if linha =~ regexs['then']
-#    matrizvalores.each do |valor|
-#        if linha =~ /#{valor}\s/
-#          tokem = $'
-#          if tokem == "" or tokem =~ /(\s|\s\s)/ or tokem =~ regexs['end']
-#            linha = linha.gsub(/#{valor}/, "\"#{valor}\"")
-#          end
-#        end
-#    end
-#  end
-
-  #Guarda as strings traduzidas no vetor 'setraduzido'
-#  if contr2 > 11
-#    setraduzido[contr3] = linha
-#    contr3 += 1
-#  end
-
-  #A linha precisa ser zerada para receber outra string
-#  linha = nil
-  #Incremento de contadores
-#  contr2 += 1
-  #contr += 1
-#end
-
-#puts selinhas
-
-#Pega as veriaveis, guarda cada uma delas em uma posição do vetor sefinal e cria a instancia das variaveis
-#setraduzido.each do |linha|
-#  if !(linha == "")
-#    variavel = /\w+\s\=/.match(linha).to_s
-#    variavel << ' ""'
-#    sefinal[cont2] = variavel
-#    cont2 += 1
-#  end
-#end
-
-#Tira os valores repetidos
-#sefinal.uniq!
-#Continua a contagem a partir do ultimo valor inserido
-#cont2 = sefinal.length
-
-#Concatena as linhas que contem and para tornar o SE compilável
-#while not cont == setraduzido.length do
-#  if !(setraduzido[cont] =~ regexs["then"])
-#    texto << setraduzido[cont]
-#  else
-#    textothen = setraduzido[cont]
-#    sefinal[cont2] = texto
-#    cont2 += 1
-#    sefinal[cont2] = textothen
-#    cont2 += 1
-#
-#    texto = ""
-#  end
-#
-#  cont += 1
-#end
-
-#Imprime cada valor contido no vetor de regras com as strings traduzidas
-#setraduzido.each do |linhat|
-  #puts "#{linhat}"
-#end
-
-#imprime cada valot contido no vetor com o SE final e compilável
-#sefinal.each do |linhat|
-#  puts "#{linhat}"
-#end
+#puts setraduzido
+#p valores
+puts sefinal
 
 #fecha os arquivos
-#rules.close
-#values.close
+rules.close
 
-#Cria o arquivo ambulancia.rb
-#exit = File.new("ambulancia.rb", "w")
+#Cria o arquivo
+file = File.new("filmes.rb", "w")
 
 #Grava o Sistema Especialista em ruby no arquivo
-#sefinal.each do |linhat|
-#  exit.puts "#{linhat}"
-#end
+sefinal.each do |linhat|
+  file.puts "#{linhat}"
+end

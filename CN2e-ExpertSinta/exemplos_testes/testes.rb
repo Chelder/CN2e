@@ -69,16 +69,31 @@
 #p $&
 #p $'
 
-linha = "and  a maioria das pessoas tem dificuldade de entender a mensagem do filme == \"nao\""
+#linha = "and  a maioria das pessoas tem dificuldade de entender a mensagem do filme == \"nao\""
 
-if linha =~ /if\s+/ or linha =~ /and\s+/ or linha =~ /then\s+/
-    init_variavel = $'
+#if linha =~ /if\s+/ or linha =~ /and\s+/ or linha =~ /then\s+/
+#    init_variavel = $'
+#
+#    if init_variavel =~ /\s*=/
+#      variavel = $`
+#      variavelmod = variavel.gsub(/\s/, "_")
+#    end
+#end
 
-    if init_variavel =~ /\s*=/
-      variavel = $`
-      variavelmod = variavel.gsub(/\s/, "_")
-    end
+#puts variavel
+#puts variavelmod
+
+linha = "then resultado == voce nao gosta de filmes end"
+
+if linha =~ /then/
+  /=\s/.match(linha)
+  init_valor = $'
+
+  if init_valor =~ /\send/
+    valor = $`
+    valormod = valor.gsub("#{valor}", "\"#{valor}\"")
+  end
 end
 
-puts variavel
-puts variavelmod
+puts valor
+puts valormod
