@@ -26,6 +26,37 @@
 
 #puts y
 
-string = "if voce nao gosta de filmes end"
+#string = "if voce nao gosta de filmes end"
 
-puts /(\w*\s?)*/.match(string)
+#puts /(\w*\s?)*/.match(string)
+
+string = "and  envolve crime guerra ou policia == sim"
+
+if string =~ /and\s*/
+  init_variavel = $'
+
+  if init_variavel =~ /\s*=/
+    variavel = $`
+    variavelmod = variavel.gsub(/\s/, "_")
+  end
+end
+
+puts string = string.gsub(/#{variavel}/, "#{variavelmod}")
+
+
+
+#puts init_variavel
+#puts variavel
+
+#puts string =~ /and\s*/
+
+#p $`
+#p $&
+#p $'
+
+#puts string =~ /\s*=/
+
+#p $`
+#p $&
+#p $'
+

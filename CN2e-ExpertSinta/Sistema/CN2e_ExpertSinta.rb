@@ -44,6 +44,7 @@ regexs = Hash[ 'SE' => /SE/,
 contr = 0
 contr2 = 10000000000
 contr3 = 0
+contr4 = 0
 
 #Contadores utilizados na tradução do dos valores
 #contv = 0
@@ -110,12 +111,28 @@ while not rules.eof do
   contr += 1
 end
 
+selinhas.each do |linha|
+  if linha =~ /and\s*/
+    init_variavel = $'
+
+    if init_variavel =~ /\s*=/
+      variavel = $`
+      variavelmod = variavel.gsub(/\s/, "_")
+    end
+  end
+
+  linha = linha.gsub(/#{variavel}/, "#{variavelmod}")
+
+  setraduzido[contr4] = linha
+  contr4 += 1
+end
+
 #puts contr2
-puts selinhas
+#puts selinhas
 #puts selinhas[14].encoding.name
 #selinhas[14].force_encoding("iso-8859-1")
 #puts selinhas[14].encoding.name
-
+puts setraduzido
 
 #-------------------------------------------------------- tradução -------------------------------------------------#
 
