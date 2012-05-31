@@ -88,6 +88,7 @@ while not rules.eof do
 
   if contr > contr2
 	  linha = tr.remover_acentos(linha)
+    linha = tr.remover_especial(linha)
 
     if !(linha =~ /then/)
       linha = linha.gsub(regexs['='], "==")
@@ -96,8 +97,7 @@ while not rules.eof do
     if linha =~ regexs['SE']
       linha = linha.gsub(regexs['SE'], "if")
     elsif linha =~ regexs['ENTAO']
-      linha = linha.gsub(regexs['ENTAO'], "then")
-      linha = linha.gsub(regexs['CNF'], " end")
+      linha = linha.gsub(regexs['ENTAO'], "then").gsub(regexs['CNF'], " end")
     elsif linha =~ regexs['E']
       linha = linha.gsub(regexs['E'], "and ")
     elsif linha =~ regexs['Regra']
@@ -114,18 +114,20 @@ while not rules.eof do
 end
 
 selinhas.each do |linha|
+  #Encontra a última palavra de cada linha e coloca aspas duplas
   if !(linha =~ regexs['then']) and (linha =~ /and / or linha =~ /if /)
-    /\w*$/.match(linha)
+    /= \w+$/.match(linha)
     var = $&
-    linha = linha.gsub("#{var}", "\"#{var}\"")
+    var2 = var.gsub(/=\s/, "")
+    linha = linha.gsub("#{var}", "= \"#{var2}\"")
   end
 
+  #Remove o espaço em excesso que está no início das linhas
   if linha =~ /if\s+/ or linha =~ /and\s+/ or linha =~ /then\s+/
-    linha = linha.gsub(/\s+if/, "if")
-    linha = linha.gsub(/\s+and/, "and")
-    linha = linha.gsub(/\s+then/, "then")
+    linha = linha.gsub(/\s+if/, "if").gsub(/\s+and/, "and").gsub(/\s+then/, "then")
   end
 
+  #Encontra as variáveis e substitui os espaços entre elas pelo underline
   if linha =~ /if\s+/ or linha =~ /and\s+/ or linha =~ /then\s+/
     init_variavel = $'
 
@@ -135,6 +137,7 @@ selinhas.each do |linha|
     end
   end
 
+  #Encontra o valor na linha do then e coloca-o entre aspas duplas
   if linha =~ regexs['then']
     /=\s/.match(linha)
     init_valor = $'
@@ -145,22 +148,22 @@ selinhas.each do |linha|
     end
   end
 
-  linha = linha.gsub(/#{variavel}/, "#{variavelmod}")
-  linha = linha.gsub(/#{valor}/, "#{valormod}")
+  #Altera as variáveis e valores encontrados anteriormente
+  linha = linha.gsub(/#{variavel}/, "#{variavelmod}").gsub(/#{valor}/, "#{valormod}")
 
   setraduzido[contr4] = linha
   contr4 += 1
 end
 
 #Pega as veriaveis, guarda cada uma delas em uma posição do vetor sefinal e cria a instancia das variaveis
-#setraduzido.each do |linha|
-#  if !(linha == "")
-#    variavel = /\w+\s+\=/.match(linha).to_s
-#    variavel << ' ""'
-#    sefinal[cont2] = variavel
-#    cont2 += 1
-#  end
-#end
+setraduzido.each do |linha|
+  if !(linha == "")
+    variavel = /\w+\s+\=/.match(linha).to_s
+    variavel << ' ""'
+    sefinal[cont2] = variavel
+    cont2 += 1
+  end
+end
 
 #Tira os valores repetidos
 sefinal.uniq!
@@ -168,24 +171,24 @@ sefinal.uniq!
 cont2 = sefinal.length
 
 #Concatena as linhas que contem and para tornar o SE compilável
-#while not cont == setraduzido.length do
-#  if !(setraduzido[cont] =~ regexs["then"])
-#    texto << " " << setraduzido[cont]
-#  else
-#    textothen = setraduzido[cont]
-#    sefinal[cont2] = texto
-#    cont2 += 1
-#    sefinal[cont2] = textothen
-#    cont2 += 1
-#
-#    texto = ""
-#  end
+while not cont == setraduzido.length do
+  if !(setraduzido[cont] =~ regexs["then"])
+    texto << " " << setraduzido[cont]
+  else
+    textothen = setraduzido[cont]
+    sefinal[cont2] = texto
+    cont2 += 1
+    sefinal[cont2] = textothen
+    cont2 += 1
 
-#  cont += 1
-#end
+    texto = ""
+  end
+
+  cont += 1
+end
 
 #puts contr2
-puts selinhas
+#puts selinhas
 #puts selinhas[14].encoding.name
 #selinhas[14].force_encoding("iso-8859-1")
 #puts selinhas[14].encoding.name
@@ -197,9 +200,9 @@ puts sefinal
 rules.close
 
 #Cria o arquivo
-#file = File.new("filmes.rb", "w")
+file = File.new("filmes.rb", "w")
 
 #Grava o Sistema Especialista em ruby no arquivo
-#sefinal.each do |linhat|
-#  file.puts "#{linhat}"
-#end
+sefinal.each do |linhat|
+  file.puts "#{linhat}"
+end
