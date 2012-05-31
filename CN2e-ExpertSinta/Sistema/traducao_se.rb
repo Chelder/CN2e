@@ -15,5 +15,15 @@ class TraducaoSe
     texto = texto.gsub(/\)+/, "").gsub(/\]+/, "").gsub(/\}+/, "")
     return texto
   end
+
+  #Encontra a última palavra de cada linha e coloca aspas duplas
+  def ultima_palavra(texto)
+    if !(linha =~ regexs['then']) and (linha =~ regexs['andesp'] or linha =~ regexs['ifesp'])
+      regexs['ultpalavra'].match(linha)
+      var = $&
+      var2 = var.gsub(regexs['=esp'], "")
+      linha = linha.gsub("#{var}", "= \"#{var2}\"")
+    end
+  end
 end
 

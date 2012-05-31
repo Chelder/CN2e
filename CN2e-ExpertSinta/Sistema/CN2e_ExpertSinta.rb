@@ -17,10 +17,12 @@ rules = File.open("filmes_basedeconhecimento.txt")
 selinhas = Array.new
 #Array com o Sistema Especialista traduzido, faltando a concatenação
 setraduzido = Array.new
-#Array com as variaveis para inicialização
-valores = Array.new
 #Array com a versão final do Sistema Especialista traduzido
 sefinal = Array.new
+#Array auxiliar
+aux = Array.new
+#Classe traducaoSe
+tr = TraducaoSe.new
 
 #Hash com regexs
 regexs = Hash[ 'SE' => /SE/,
@@ -30,13 +32,21 @@ regexs = Hash[ 'SE' => /SE/,
                'then' => /then/,
                'end' => /end/,
                'espaco' => /\s/,
-               'identvalores' => /([a-zA-Z])+?([0-9])+?([a-zA-Z])+?([0-9])+?([a-zA-Z])+|\s([a-zA-Z])+\s|([a-zA-Z])+?([0-9])+?([a-zA-Z])+/,
                'CNF' => /.\sCNF\s\d*%/,
                'Regra' => /Regra\s\d*/,
                'REGRAS' => /REGRAS/,
                'PERG' => /PERGUNTAS/,
                #regexp que encontra frases
-               'frases' => /(\w*\s?)*/
+               'frases' => /(\w*\s?)*/,
+               'andesp' => /and\s+/,
+               'ifesp' => /if\s+/,
+               'thenesp' => /then\s+/,
+               'espif' => /\s+if/,
+               'espand' => /\s+and/,
+               'espthen' => /\s+then/,
+               'ultpalavra' => /= \w+$/,
+               '=esp' => /=\s/,
+               'variavel' => /\w+\s+\=/
               ]
 
 #Inicialização de variáveis
@@ -46,32 +56,14 @@ contr2 = 10000000000
 contr3 = 0
 contr4 = 0
 
-#Contadores utilizados na tradução do dos valores
-#contv = 0
-#contv2 = 0
-#contv3 = 0
-
-#Contadores da matriz
-#contmatriz = 0
-#contvetor = 0
-
 #Contadores utilizados na contatenação das condições do IF
 cont = 0;
 cont2 = 0;
 
 #Variaveis utiliadas para alocação de valores temporários
 texto = ""
-#textothen = ""
-
-
-#col = ""
-#col2 = ""
-#tokem = ""
 
 #-------------------------------------------------------- Filtro ---------------------------------------------------#
-
-aux = Array.new
-tr = TraducaoSe.new
 
 while not rules.eof do
   aux[contr] = rules.gets.chomp.to_s
@@ -90,10 +82,6 @@ while not rules.eof do
 	  linha = tr.remover_acentos(linha)
     linha = tr.remover_especial(linha)
 
-    if !(linha =~ /then/)
-      linha = linha.gsub(regexs['='], "==")
-    end
-
     if linha =~ regexs['SE']
       linha = linha.gsub(regexs['SE'], "if")
     elsif linha =~ regexs['ENTAO']
@@ -102,6 +90,10 @@ while not rules.eof do
       linha = linha.gsub(regexs['E'], "and ")
     elsif linha =~ regexs['Regra']
       linha = linha.gsub(regexs['Regra'], "")
+    end
+
+    if !(linha =~ /then/)
+      linha = linha.gsub(regexs['='], "==")
     end
 
     linha = linha.downcase
@@ -113,22 +105,24 @@ while not rules.eof do
   contr += 1
 end
 
+#-------------------------------------------------------- Tradução ---------------------------------------------------#
+
 selinhas.each do |linha|
   #Encontra a última palavra de cada linha e coloca aspas duplas
-  if !(linha =~ regexs['then']) and (linha =~ /and / or linha =~ /if /)
-    /= \w+$/.match(linha)
+  if !(linha =~ regexs['then']) and (linha =~ regexs['andesp'] or linha =~ regexs['ifesp'])
+    regexs['ultpalavra'].match(linha)
     var = $&
-    var2 = var.gsub(/=\s/, "")
+    var2 = var.gsub(regexs['=esp'], "")
     linha = linha.gsub("#{var}", "= \"#{var2}\"")
   end
 
   #Remove o espaço em excesso que está no início das linhas
-  if linha =~ /if\s+/ or linha =~ /and\s+/ or linha =~ /then\s+/
-    linha = linha.gsub(/\s+if/, "if").gsub(/\s+and/, "and").gsub(/\s+then/, "then")
+  if linha =~ regexs['ifesp'] or linha =~ regexs['andesp'] or linha =~ regexs['thenesp']
+    linha = linha.gsub(regexs['espif'], "if").gsub(regexs['espand'], "and").gsub(regexs['espthen'], "then")
   end
 
   #Encontra as variáveis e substitui os espaços entre elas pelo underline
-  if linha =~ /if\s+/ or linha =~ /and\s+/ or linha =~ /then\s+/
+  if linha =~ regexs['ifesp'] or linha =~ regexs['andesp'] or linha =~ regexs['thenesp']
     init_variavel = $'
 
     if init_variavel =~ /\s*=/
@@ -139,7 +133,7 @@ selinhas.each do |linha|
 
   #Encontra o valor na linha do then e coloca-o entre aspas duplas
   if linha =~ regexs['then']
-    /=\s/.match(linha)
+    regexs['=esp'].match(linha)
     init_valor = $'
 
     if init_valor =~ /\send/
@@ -158,7 +152,7 @@ end
 #Pega as veriaveis, guarda cada uma delas em uma posição do vetor sefinal e cria a instancia das variaveis
 setraduzido.each do |linha|
   if !(linha == "")
-    variavel = /\w+\s+\=/.match(linha).to_s
+    variavel = regexs['variavel'].match(linha).to_s
     variavel << ' ""'
     sefinal[cont2] = variavel
     cont2 += 1
@@ -187,13 +181,6 @@ while not cont == setraduzido.length do
   cont += 1
 end
 
-#puts contr2
-#puts selinhas
-#puts selinhas[14].encoding.name
-#selinhas[14].force_encoding("iso-8859-1")
-#puts selinhas[14].encoding.name
-#puts setraduzido
-#p valores
 puts sefinal
 
 #fecha os arquivos
