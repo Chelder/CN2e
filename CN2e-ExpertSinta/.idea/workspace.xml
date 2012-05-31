@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="37df93a7-56fa-4589-87ce-fd087531b5fa" name="Default" comment="Sistema concluído.">
+    <list default="true" id="37df93a7-56fa-4589-87ce-fd087531b5fa" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Sistema/CN2e_ExpertSinta.rb" afterPath="$PROJECT_DIR$/Sistema/CN2e_ExpertSinta.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Sistema/traducao_se.rb" afterPath="$PROJECT_DIR$/Sistema/traducao_se.rb" />
     </list>
     <ignored path="CN2e-ExpertSinta.iws" />
@@ -39,7 +38,7 @@
       <file leaf-file-name="CN2e_ExpertSinta.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Sistema/CN2e_ExpertSinta.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="130" column="7" selection-start="3821" selection-end="3944" vertical-scroll-proportion="0.8817204">
+            <state line="109" column="33" selection-start="3084" selection-end="3084" vertical-scroll-proportion="0.5322581">
               <folding />
             </state>
           </provider>
@@ -48,7 +47,7 @@
       <file leaf-file-name="traducao_se.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Sistema/traducao_se.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="26" selection-start="755" selection-end="755" vertical-scroll-proportion="0.0">
+            <state line="45" column="0" selection-start="1569" selection-end="1569" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -66,7 +65,7 @@
       <file leaf-file-name="filmes.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Sistema/filmes.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="0" selection-start="7144" selection-end="7144" vertical-scroll-proportion="0.0">
+            <state line="69" column="0" selection-start="7134" selection-end="7134" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -241,32 +240,7 @@
       <recent name="C:\Ruby192\lib\" />
     </key>
   </component>
-  <component name="RunManager" selected="Ruby.filmes">
-    <configuration default="false" name="All tests in: CN2e-ExpertSinta" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda" temporary="true">
-      <predefined_log_file id="RUBY_TESTUNIT" enabled="true" />
-      <module name="CN2e-ExpertSinta" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
-      <envs>
-        <env name="JRUBY_OPTS" value="-X+O" />
-      </envs>
-      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
-      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" track_test_folders="true" runner="rcov" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="$PROJECT_DIR$" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_CLASS_NAME" VALUE="" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/{*_test,test_*}.rb" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_METHOD_NAME" VALUE="" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="ALL_IN_FOLDER" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="INHERITANCE_CHECK_DISABLED" VALUE="false" />
-      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
-      <RunnerSettings RunnerId="RubyRunner" />
-      <ConfigurationWrapper RunnerId="RubyRunner" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Ruby.CN2e_ExpertSinta">
     <configuration default="false" name="CN2e_ExpertSinta" type="RubyRunConfigurationType" factoryName="Ruby" temporary="true">
       <module name="CN2e-ExpertSinta" />
       <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -326,6 +300,22 @@
       <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
       <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" track_test_folders="true" runner="rcov" />
       <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$PROJECT_DIR$/Sistema/filmes.rb" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
+      <RunnerSettings RunnerId="RubyRunner" />
+      <ConfigurationWrapper RunnerId="RubyRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="traducao_se" type="RubyRunConfigurationType" factoryName="Ruby" temporary="true">
+      <module name="CN2e-ExpertSinta" />
+      <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RUBY_RUN_CONFIG NAME="WORK DIR" VALUE="$PROJECT_DIR$/Sistema" />
+      <RUBY_RUN_CONFIG NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RUBY_RUN_CONFIG NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RUBY_RUN_CONFIG NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" track_test_folders="true" runner="rcov" />
+      <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="$PROJECT_DIR$/Sistema/traducao_se.rb" />
       <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
       <RunnerSettings RunnerId="RubyRunner" />
       <ConfigurationWrapper RunnerId="RubyRunner" />
@@ -420,11 +410,11 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Test::Unit/Shoulda.All tests in: CN2e-ExpertSinta" />
-      <item index="1" class="java.lang.String" itemvalue="Ruby.CN2e_ExpertSinta" />
-      <item index="2" class="java.lang.String" itemvalue="Ruby.testes" />
-      <item index="3" class="java.lang.String" itemvalue="Ruby.CN2e_v2" />
-      <item index="4" class="java.lang.String" itemvalue="Ruby.filmes" />
+      <item index="0" class="java.lang.String" itemvalue="Ruby.CN2e_ExpertSinta" />
+      <item index="1" class="java.lang.String" itemvalue="Ruby.testes" />
+      <item index="2" class="java.lang.String" itemvalue="Ruby.CN2e_v2" />
+      <item index="3" class="java.lang.String" itemvalue="Ruby.filmes" />
+      <item index="4" class="java.lang.String" itemvalue="Ruby.traducao_se" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -485,7 +475,7 @@
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17559524" sideWeight="0.6699187" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3300813" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="725" y="513" width="470" height="373" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3300813" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="725" y="513" width="470" height="373" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284553" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -523,7 +513,7 @@
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sistema concluído." />
+    <option name="LAST_COMMIT_MESSAGE" value="Sistema concluído.&#10;Aplicando classes e refinando código" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -545,6 +535,7 @@
     <MESSAGE value="Sistema está gerando o arquivo filmes.rb. Falta remover espaços antes do IF, AND e THEN" />
     <MESSAGE value="Consegui remover os espaços, mas deve haver algum caracter antes do then, pois não consigo encontrá-lo através de uma regexp" />
     <MESSAGE value="Sistema concluído." />
+    <MESSAGE value="Sistema concluído.&#10;Aplicando classes e refinando código" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -607,23 +598,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Sistema/traducao_se.rb">
+    <entry file="file://$PROJECT_DIR$/Sistema/filmes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="26" selection-start="755" selection-end="755" vertical-scroll-proportion="0.0">
+        <state line="69" column="0" selection-start="7134" selection-end="7134" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Sistema/filmes.rb">
+    <entry file="file://$PROJECT_DIR$/Sistema/traducao_se.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="0" selection-start="7144" selection-end="7144" vertical-scroll-proportion="0.0">
+        <state line="45" column="0" selection-start="1569" selection-end="1569" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Sistema/CN2e_ExpertSinta.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="130" column="7" selection-start="3821" selection-end="3944" vertical-scroll-proportion="0.8817204">
+        <state line="109" column="33" selection-start="3084" selection-end="3084" vertical-scroll-proportion="0.5322581">
           <folding />
         </state>
       </provider>
